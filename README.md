@@ -29,3 +29,9 @@
 - Telescope -> /telescope             
 
 
+
+
+
+api 통신 오류나서
+composer require fruitcake/laravel-cors
+
