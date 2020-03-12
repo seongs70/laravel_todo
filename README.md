@@ -35,3 +35,7 @@
 api 통신 오류나서
 composer require fruitcake/laravel-cors
 
+
+
+cors 오류 해결 
+https://medium.com/sjk5766/laravel-cors-%ED%97%88%EC%9A%A9-b2ae44589fc0
