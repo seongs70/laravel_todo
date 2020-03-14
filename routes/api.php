@@ -17,11 +17,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+
 Route::get('/todos', 'TodosController@index');
 Route::post('/todos', 'TodosController@store');
 Route::patch('/todos/{todo}', 'TodosController@update');
 Route::patch('/todosCheckAll', 'TodosController@updateAll');
 Route::delete('/todos/{todo}', 'TodosController@destroy');
 Route::delete('/todosDeleteCompleted', 'TodosController@destroyCompleted');
-
-
+//Route::post('/login', 'AuthController@login');
+//Route::post('/register', 'AuthController@login');
+Route::post('/register', 'UserController@registerUser');
+Route::post('/login', 'UserController@userLogin');
+Route::middleware('auth:api')->post('/logout','UserController@logout');
