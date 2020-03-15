@@ -24,7 +24,7 @@ class AuthController extends Controller
         );
 
         if($validator->fails()) {
-            return response()->json(['Validation errors' => $validator->errors()]);
+            return response()->json(['error' => $validator->errors()], 401);
         }
 
         $input              =       array(
@@ -66,7 +66,7 @@ class AuthController extends Controller
         }
 
         else {
-            return response()->json(['error'=>'Unauthorised'], 401);
+            return response()->json(['error'=>'Invalid Request. Please enter a username or a password.'], 401);
         }
     }
 
